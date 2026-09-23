@@ -179,32 +179,23 @@ const KaraokeWord: React.FC<{
   const n = frame - delay;
   if (n < 0) return <span style={{display: 'inline-block', marginRight: '0.28em', visibility: 'hidden'}}>{word}</span>;
   const p = easeOutCubic(n / 9);
-  // Karaoke state from TTS timing: future (dim) -> active (bright glow) -> spoken (settled)
+  // Karaoke state from TTS timing: future (dim) -> active (bright glow) -> spoken (settled).
+  // NOTE: solid colors + textShadow only — background-clip:text breaks into a
+  // solid rectangle when the span is mid opacity/transform transition in Chromium.
   const active = frame >= start && frame < end;
   const future = frame < start;
   const glowPulse = 0.8 + 0.2 * Math.sin(frame / 18 + seed);
-  let wordStyle: React.CSSProperties;
-  if (active) {
-    // Currently being spoken: bright white-to-purple glow
-    wordStyle = {
-      background: 'linear-gradient(135deg, #ffffff, #d3c6ff, #b3a1ff)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      backgroundClip: 'text',
-      filter: `drop-shadow(0 0 ${(10 * glowPulse).toFixed(1)}px rgba(124,92,252,0.55))`,
-    };
-  } else if (emph) {
-    // Key term: light purple gradient, kept subtle for readability
-    wordStyle = {
-      background: 'linear-gradient(135deg, #e6dfff, #b7a6ff)',
-      WebkitBackgroundClip: 'text',
-      WebkitTextFillColor: 'transparent',
-      backgroundClip: 'text',
-      filter: 'drop-shadow(0 0 5px rgba(124,92,252,0.3))',
-    };
-  } else {
-    wordStyle = {};
-  }
+  const wordStyle: React.CSSProperties = active
+    ? {
+        color: '#ffffff',
+        textShadow: `0 0 14px rgba(179,161,255,${(0.85 * glowPulse).toFixed(2)}), 0 0 30px rgba(124,92,252,${(0.55 * glowPulse).toFixed(2)}), 0 2px 8px rgba(0,0,0,0.8)`,
+      }
+    : emph
+      ? {
+          color: '#cfc0ff',
+          textShadow: '0 0 8px rgba(124,92,252,0.35), 0 2px 8px rgba(0,0,0,0.8)',
+        }
+      : {};
   return (
     <span
       style={{
