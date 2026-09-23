@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gitgem-explainer-tool.pages.dev/sitemap.xml

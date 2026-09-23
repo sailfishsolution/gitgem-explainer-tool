@@ -148,6 +148,11 @@ PRs are welcome! Ideas that would make great first contributions:
 
 MIT — see [LICENSE](LICENSE).
 
+## ✍️ Articles
+
+- [Why We Built the GitGem Explainer Tool](articles/why-we-built-gitgem-explainer.md) — the story behind the tool and why it can be free, forever
+- [Why Open Source Matters — and Why Gitgem Lists It](articles/why-open-source-matters.md) — the economics of truly free tools, and how Gitgem verifies and lists projects
+
 ---
 
 <div align="center">
