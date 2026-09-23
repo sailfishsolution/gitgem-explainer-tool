@@ -379,13 +379,14 @@ export default function App() {
               <section className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm space-y-4">
                 <h2 className="text-xl font-bold text-gray-900">About GitGem</h2>
                 <p className="text-gray-600 leading-relaxed">
-                  GitGem is an open-source project that makes professional-quality explainer videos accessible to everyone.
-                  Our tools use AI to generate scripts, neural text-to-speech for narration, and motion graphics for visuals
-                  — all running in your browser.
+                  GitGem is an open-source project from <a href="https://gitgem.org" target="_blank" rel="noopener noreferrer" className="text-purple-600 font-medium hover:text-purple-700">Gitgem.org</a> that
+                  makes explainer videos accessible to everyone: type a question and get a narrated, animated video you can download and share.
+                  The AI writes a chaptered script, free neural voices (2 male, 2 female) narrate it, and the video is rendered
+                  entirely in your browser — nothing is uploaded, stored, or billed.
                 </p>
                 <p className="text-gray-600 leading-relaxed">
                   We believe knowledge should be free and accessible. That's why this tool is completely free to use,
-                  open source under the MIT license, and requires zero signups.
+                  open source under the MIT license, requires zero signups, and shows no ads or trackers.
                 </p>
                 <div className="flex flex-wrap gap-3 pt-2">
                   <a href="https://gitgem.org" target="_blank" rel="noopener noreferrer"
@@ -398,6 +399,10 @@ export default function App() {
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                     View on GitHub
                   </a>
+                  <a href="/blog/" target="_blank" rel="noopener noreferrer"
+                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-purple-50 text-purple-700 text-sm font-medium hover:bg-purple-100 transition-colors">
+                    Read the Blog
+                  </a>
                 </div>
               </section>
 
@@ -406,9 +411,9 @@ export default function App() {
                 <h2 className="text-xl font-bold text-gray-900">How It Works</h2>
                 <div className="grid sm:grid-cols-3 gap-6">
                   {[
-                    { step: '1', title: 'Enter a Topic', desc: 'Type any subject you want to explain. Our AI generates a structured script with chapters and narration.' },
-                    { step: '2', title: 'Preview & Edit', desc: 'Review the generated script. Edit chapters, reorder sentences, or regenerate until it\'s perfect.' },
-                    { step: '3', title: 'Generate Video', desc: 'Click render and watch your explainer video come to life with motion graphics, subtitles, and voiceover.' },
+                    { step: '1', title: 'Enter a Topic', desc: 'Type any question and pick an approximate length (~30s, ~60s, ~90s). Longer videos ask the AI for more depth and detail.' },
+                    { step: '2', title: 'Preview & Edit', desc: 'Review the chaptered script. Tap any chapter to expand it, edit sentences, reorder or add your own.' },
+                    { step: '3', title: 'Generate Video', desc: 'Pick a voice, hit render — the video lasts exactly as long as the narration needs. Download it as MP4 or WebM.' },
                   ].map((item) => (
                     <div key={item.step} className="text-center space-y-3">
                       <div className="w-10 h-10 mx-auto rounded-full bg-purple-100 text-purple-700 font-bold text-sm flex items-center justify-center">
@@ -426,12 +431,14 @@ export default function App() {
                 <h2 className="text-xl font-bold text-gray-900">Technology</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {[
-                    { label: 'Script Generation', value: 'Cloudflare Workers AI (Llama 4, Qwen 3)' },
-                    { label: 'Text-to-Speech', value: 'Free Edge neural voices (male & female)' },
-                    { label: 'Motion Graphics', value: 'Remotion (React-based video framework)' },
-                    { label: 'Video Rendering', value: 'WebCodecs in-browser (MP4 / WebM)' },
+                    { label: 'Script Generation', value: 'Cloudflare Workers AI with Groq fallback' },
+                    { label: 'Text-to-Speech', value: 'Free Edge neural voices — Guy, Andrew, Aria & Emma' },
+                    { label: 'Motion Graphics', value: 'Remotion — React components rendered frame-by-frame' },
+                    { label: 'Video Rendering', value: 'WebCodecs in your browser (MP4 / WebM)' },
+                    { label: 'Subtitles', value: 'Karaoke-synced to the narration, word by word' },
+                    { label: 'Duration', value: 'Adapts to the narration — nothing is cut short' },
                     { label: 'Hosting', value: 'Cloudflare Pages + Workers (free tier)' },
-                    { label: 'Privacy', value: 'Everything renders in your browser' },
+                    { label: 'Privacy', value: 'No accounts, no cookies, no tracking — everything renders locally' },
                   ].map((item) => (
                     <div key={item.label} className="flex flex-col gap-1">
                       <dt className="text-xs font-semibold text-gray-400 uppercase tracking-wider">{item.label}</dt>
@@ -439,6 +446,20 @@ export default function App() {
                     </div>
                   ))}
                 </div>
+              </section>
+
+              {/* Why it's free */}
+              <section className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm space-y-4">
+                <h2 className="text-xl font-bold text-gray-900">How Can It Be Free?</h2>
+                <p className="text-gray-600 leading-relaxed">
+                  Because there's no server doing the heavy lifting. Most video tools charge you because they own
+                  the render farm — thousands of machines turning timelines into video files. Here, <strong className="text-gray-900">your
+                  browser is the render farm</strong>: WebCodecs draws and encodes every frame on your own device.
+                  The script and voices run on free quotas. There's nothing to meter, so there's nothing to bill.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Read more in our blog: <a href="/blog/how-is-it-free" className="text-purple-600 font-medium hover:text-purple-700">How Can a Video Tool Be Free?</a>
+                </p>
               </section>
 
               {/* Terms of Service / Privacy */}
@@ -449,14 +470,14 @@ export default function App() {
                     <h3 className="font-semibold text-gray-900 mb-1">No Data Collection</h3>
                     <p>
                       This tool runs entirely in your browser. We do not collect, store, or transmit any personal data.
-                      Your scripts, voice data, and videos never leave your device. The only server calls are to
-                      Cloudflare Workers AI for script generation and text-to-speech, which are processed anonymously.
+                      Your scripts, edits, and rendered videos never leave your device. The only server calls are to a free
+                      Cloudflare Worker for script generation and voice synthesis, processed anonymously — nothing is logged or stored.
                     </p>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">No Cookies</h3>
+                    <h3 className="font-semibold text-gray-900 mb-1">No Cookies, No Tracking</h3>
                     <p>
-                      This website does not use cookies, analytics trackers, or any form of user tracking.
+                      This website does not use cookies, analytics, or any form of user tracking.
                     </p>
                   </div>
                   <div>

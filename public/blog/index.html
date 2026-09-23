@@ -17,50 +17,67 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Blog","name":"GitGem Blog","url":"https://gitgem-explainer-tool.pages.dev/blog/","publisher":{"@type":"Organization","name":"Gitgem.org","url":"https://gitgem.org"}}
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', 'Segoe UI', sans-serif; background: #0b0b0f; color: #e7e5ea; min-height: 100vh; }
-    a { color: #b3a1ff; text-decoration: none; } a:hover { color: #cfc0ff; }
-    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid #1d1c22; }
-    .brand { font-weight: 800; font-size: 18px; color: #fff; }
-    .brand span { color: #b3a1ff; }
-    main { max-width: 720px; margin: 0 auto; padding: 56px 24px; }
-    h1 { font-size: 34px; margin-bottom: 10px; }
-    .sub { color: #9b96a5; margin-bottom: 44px; }
-    .card { display: block; border: 1px solid #232229; border-radius: 14px; padding: 22px 24px; margin-bottom: 16px; transition: border-color .15s; }
-    .card:hover { border-color: #7c5cfc; }
-    .card h2 { color: #fff; font-size: 19px; margin-bottom: 6px; }
-    .card p { color: #9b96a5; font-size: 14.5px; line-height: 1.55; }
-    footer { text-align: center; padding: 40px 24px 60px; color: #6f6a78; font-size: 13.5px; }
-    footer a { margin: 0 8px; }
+    body { font-family: 'Inter', 'Segoe UI', sans-serif; background: #f9fafb; color: #111827; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #7c5cfc; text-decoration: none; } a:hover { color: #6d4fd6; }
+    header { position: sticky; top: 0; z-index: 50; display: flex; justify-content: space-between; align-items: center; padding: 14px 24px; background: rgba(255,255,255,.85); backdrop-filter: blur(12px); border-bottom: 1px solid #e5e7eb; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; color: #111827; }
+    .brand .mark { width: 34px; height: 34px; border-radius: 10px; background: linear-gradient(135deg, #a855f7, #4f46e5); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(124,92,252,.3); }
+    .brand .mark svg { width: 20px; height: auto; }
+    .brand b { color: #7c5cfc; }
+    .top-link { font-size: 13.5px; font-weight: 600; padding: 7px 14px; border-radius: 10px; background: #7c5cfc; color: #fff !important; }
+    .top-link:hover { background: #6d4fd6; }
+    main { flex: 1; max-width: 720px; width: 100%; margin: 0 auto; padding: 56px 24px; }
+    .kicker { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #7c5cfc; margin-bottom: 10px; }
+    h1 { font-size: 34px; letter-spacing: -.02em; margin-bottom: 10px; }
+    .sub { color: #6b7280; margin-bottom: 44px; font-size: 15.5px; }
+    .card { display: block; background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px 26px; margin-bottom: 16px; transition: all .18s; box-shadow: 0 1px 2px rgba(16,24,40,.04); }
+    .card:hover { border-color: #c4b5fd; box-shadow: 0 8px 24px rgba(124,92,252,.12); transform: translateY(-2px); }
+    .card .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #7c5cfc; background: #f3efff; border-radius: 999px; padding: 3px 10px; margin-bottom: 10px; }
+    .card h2 { color: #111827; font-size: 19px; margin-bottom: 6px; letter-spacing: -.01em; }
+    .card p { color: #6b7280; font-size: 14.5px; line-height: 1.6; }
+    footer { text-align: center; padding: 40px 24px 60px; color: #9ca3af; font-size: 13.5px; border-top: 1px solid #e5e7eb; background: #fff; }
+    footer a { margin: 0 8px; font-weight: 500; }
+    footer a.strong { color: #7c5cfc; }
   </style>
 </head>
 <body>
   <header>
-    <a class="brand" href="/">Git<span>Gem</span> Explainer Tool</a>
-    <a href="https://gitgem.org">💎 Gitgem.org</a>
+    <a class="brand" href="/">
+      <span class="mark"><svg viewBox="-20 -2 40 30"><path d="M-12,0 L12,0 L0,8 Z" fill="#ddd3ff"/><path d="M-12,0 L0,8 L-18,8 Z" fill="#c9b8ff"/><path d="M12,0 L18,8 L0,8 Z" fill="#bda9ff"/><path d="M-18,8 L0,8 L0,26 Z" fill="#a687ff"/><path d="M18,8 L0,8 L0,26 Z" fill="#9273f0"/><path d="M-6,-1.7 L-5,1.5 L-1.8,2.5 L-5,3.5 L-6,6.7 L-7,3.5 L-10.2,2.5 L-7,1.5 Z" fill="#ffffff"/></svg></span>
+      Git<b>Gem</b> <span style="color:#9ca3af;font-weight:500;">Blog</span>
+    </a>
+    <a class="top-link" href="/">✨ Try the Tool</a>
   </header>
   <main>
-    <h1>GitGem Blog</h1>
-    <p class="sub">Stories and thinking from <strong>Gitgem.org</strong> — find open-source projects worth starring.</p>
+    <p class="kicker">Gitgem.org</p>
+    <h1>Stories &amp; thinking</h1>
+    <p class="sub">From <strong>Gitgem.org</strong> — find open-source projects worth starring. Here's the thinking behind our free tools.</p>
 
     <a class="card" href="/blog/why-we-built-gitgem-explainer">
+      <span class="tag">Project Story</span>
       <h2>Why We Built the GitGem Explainer Tool</h2>
-      <p>Every question deserves a clear explanation. Here's how we removed every wall between a question and a narrated video — and why Gitgem.org gives it away.</p>
-    </a>
-
-    <a class="card" href="/blog/why-open-source-matters">
-      <h2>Why Open Source Matters — and Why Gitgem Lists Projects</h2>
-      <p>Code is the most honest product description ever written. Why open source makes "free" structural, and how Gitgem verifies and lists projects worth your star.</p>
+      <p>Every question deserves a clear explanation. Here's how we removed every wall between a question and a narrated video.</p>
     </a>
 
     <a class="card" href="/blog/how-is-it-free">
-      <h2>How Can a Video Tool Be Free? The Economics Explained</h2>
+      <span class="tag">The Economics</span>
+      <h2>How Can a Video Tool Be Free?</h2>
       <p>Most "free" tools charge you with ads or data. GitGem has no server doing the heavy lifting — your browser is the render farm. Here's the math.</p>
+    </a>
+
+    <a class="card" href="/blog/why-open-source-matters">
+      <span class="tag">Open Source</span>
+      <h2>Why Open Source Matters — and Why Gitgem Lists Projects</h2>
+      <p>Code is the most honest product description ever written. How Gitgem verifies ownership and surfaces projects worth your star.</p>
     </a>
   </main>
   <footer>
-    <a href="https://gitgem.org"><strong>Gitgem.org</strong></a> · <a href="/">Explainer Tool</a> · <a href="https://x.com/GitGem">@GitGem</a> · <a href="https://github.com/sailfishsolution/gitgem-explainer-tool">GitHub</a>
+    <a class="strong" href="https://gitgem.org">💎 Gitgem.org</a> · <a href="/">Explainer Tool</a> · <a href="https://x.com/GitGem">@GitGem</a> · <a href="https://github.com/sailfishsolution/gitgem-explainer-tool">GitHub</a>
   </footer>
 </body>
 </html>
