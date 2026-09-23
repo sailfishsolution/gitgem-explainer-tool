@@ -73,15 +73,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- SEO: crawlable text content for bots (visually rendered by the React app) -->
-  <noscript>
-    <h1>GitGem Explainer Tool — Free AI Explainer Video Generator</h1>
-    <p>Turn any question into a narrated, animated explainer video — free, with no signup. An AI writes a chaptered script, free neural voices narrate it, and the video renders entirely in your browser as MP4 or WebM.</p>
-  </noscript>
 </head>
 <body class="min-h-screen flex flex-col">
   <div id="root"></div>
+  <!-- SEO: crawlable text content for bots (the React app renders the full UI) -->
+  <noscript>
+    <h1>GitGem Explainer Tool — Free AI Explainer Video Generator</h1>
+    <p>Turn any question into a narrated, animated explainer video — free, with no signup. An AI writes a chaptered script, free neural voices narrate it, and the video renders entirely in your browser as MP4 or WebM.</p>
+    <p><a href="https://gitgem.org">Gitgem.org</a> — Find open-source projects worth starring.</p>
+  </noscript>
   <script type="module" src="/src/web/main.tsx"></script>
 </body>
 </html>
