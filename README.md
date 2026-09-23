@@ -1,5 +1,7 @@
 <div align="center">
 
+<a href="https://gitgem.org/github/sailfishsolution/gitgem-explainer-tool"><img src="https://gitgem.org/api/badge/github/sailfishsolution/gitgem-explainer-tool.svg" alt="GitGem"></a>
+
 <img src="public/gitgem-mark.svg" alt="GitGem" width="72" />
 
 # 💎 GitGem Explainer Tool
