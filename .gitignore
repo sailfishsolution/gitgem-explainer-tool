@@ -1,0 +1,13 @@
+﻿node_modules/
+dist/
+.remotion/
+.wrangler/
+worker/node_modules/
+worker/.wrangler/
+worker/worker-configuration.d.ts
+*.mp4
+.DS_Store
+ROADMAP.md
+.env
+.env.*
+*.local

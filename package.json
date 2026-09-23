@@ -1,0 +1,52 @@
+{
+  "name": "@gitgem/explainer-tool",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Free, open-source tool from Gitgem.org that creates narrated motion-graphics explainer videos",
+  "private": true,
+  "author": "Gitgem.org",
+  "license": "MIT",
+  "homepage": "https://gitgem.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sailfishsolution/gitgem-explainer-tool"
+  },
+  "keywords": [
+    "explainer",
+    "video",
+    "tts",
+    "remotion",
+    "motion-graphics",
+    "open-source",
+    "gitgem"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "wrangler pages deploy dist --project-name=gitgem-explainer-tool",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/media": "4.0.507",
+    "@remotion/player": "^4.0.507",
+    "@remotion/web-renderer": "4.0.507",
+    "@vitejs/plugin-react": "^4.7.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.507",
+    "vite": "^6.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.57.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "5.9.3",
+    "wrangler": "^4.136.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
