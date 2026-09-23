@@ -1,6 +1,6 @@
 # Why We Built the GitGem Explainer Tool
 
-*A Gitgem.org project story*
+*A Gitgem.org project story — discover more verified free projects at **[Gitgem.org](https://gitgem.org)***
 
 ## Every question deserves a good explanation
 
@@ -48,8 +48,8 @@ Some of that we'll build. Some of it the community will build faster than we cou
 
 ## Try it, break it, improve it
 
-The tool is live at [gitgem-explainer-tool.pages.dev](https://gitgem-explainer-tool.pages.dev), and the code is [on GitHub](https://github.com/sailfishsolution/gitgem-explainer-tool) under MIT license. If you build something better on top of it — that's not competition, that's the point.
+Everything we make lives at **[Gitgem.org](https://gitgem.org)** — our home for finding, verifying, and listing open-source projects worth starring. The tool is live at [gitgem-explainer-tool.pages.dev](https://gitgem-explainer-tool.pages.dev), and the code is [on GitHub](https://github.com/sailfishsolution/gitgem-explainer-tool) under MIT license. If you build something better on top of it — that's not competition, that's the point.
 
 Knowledge should be easy to give and easy to get. This is our small piece of that.
 
-**— Gitgem.org · Find open-source projects worth starring**
+**— Gitgem.org · The home of verified open-source projects — [gitgem.org](https://gitgem.org)**

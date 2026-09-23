@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Can a Video Tool Be Free? The Economics Explained | Gitgem.org</title>
+  <meta name="description" content="Most free video tools charge you with ads, watermarks or data. GitGem's explainer tool has no server doing the heavy lifting — your browser renders the video. Here's the math.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gitgem-explainer-tool.pages.dev/blog/how-is-it-free">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="GitGem">
+  <meta property="og:title" content="How Can a Video Tool Be Free? The Economics Explained">
+  <meta property="og:description" content="Your browser is the render farm. Why Gitgem.org can offer an AI explainer-video generator with no signup, no credits and no watermark games.">
+  <meta property="og:url" content="https://gitgem-explainer-tool.pages.dev/blog/how-is-it-free">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@GitGem">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"How Can a Video Tool Be Free? The Economics Explained","author":{"@type":"Organization","name":"Gitgem.org","url":"https://gitgem.org"},"publisher":{"@type":"Organization","name":"Gitgem.org","url":"https://gitgem.org"},"mainEntityOfPage":"https://gitgem-explainer-tool.pages.dev/blog/how-is-it-free","about":["free software","open source","browser rendering"]}
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', 'Segoe UI', sans-serif; background: #0b0b0f; color: #e7e5ea; }
+    a { color: #b3a1ff; text-decoration: none; } a:hover { color: #cfc0ff; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; border-bottom: 1px solid #1d1c22; }
+    .brand { font-weight: 800; font-size: 18px; color: #fff; } .brand span { color: #b3a1ff; }
+    main { max-width: 720px; margin: 0 auto; padding: 56px 24px 20px; line-height: 1.75; }
+    h1 { font-size: 32px; line-height: 1.25; margin-bottom: 8px; color: #fff; }
+    .meta { color: #9b96a5; font-size: 13.5px; margin-bottom: 36px; }
+    h2 { color: #fff; font-size: 21px; margin: 34px 0 10px; }
+    p { margin-bottom: 16px; font-size: 15.5px; }
+    strong { color: #fff; }
+    .callout { border: 1px solid #2b2837; background: #121118; border-radius: 12px; padding: 18px 20px; margin: 26px 0; }
+    footer { text-align: center; padding: 50px 24px 60px; color: #6f6a78; font-size: 13.5px; }
+    footer a { margin: 0 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">Git<span style="color:#b3a1ff">Gem</span> Explainer Tool</a>
+    <a href="https://gitgem.org">💎 Gitgem.org</a>
+  </header>
+  <main>
+    <h1>How Can a Video Tool Be Free? The Economics Explained</h1>
+    <p class="meta">A Gitgem.org explainer · <a href="https://gitgem.org">gitgem.org</a></p>
+
+    <h2>Nothing is free — but some things have no bill</h2>
+    <p>Whenever a tool claims to be free, the right question is: <strong>who is paying for it, and how?</strong> There are only three honest answers:</p>
+    <p>1. <strong>Ads</strong> — you pay with your attention.<br>
+    2. <strong>Data</strong> — you pay with your behavior.<br>
+    3. <strong>Freemium</strong> — the free part is a sample, and the paywall is waiting.</p>
+    <p>The <a href="/">GitGem Explainer Tool</a> uses none of them. Here's why that's possible — and it's not charity, it's architecture.</p>
+
+    <h2>The expensive part of a video tool isn't the AI — it's the rendering</h2>
+    <p>People assume video tools are expensive because of fancy AI. In reality, the costly part of most video products is <strong>the render farm</strong>: thousands of machines that turn timelines into video files, plus the storage and bandwidth to host your creations. That's the meter that needs billing.</p>
+    <p>GitGem simply doesn't have that meter. The entire video is rendered by <strong>your own browser</strong> using WebCodecs — your CPU and GPU draw every frame locally and encode the MP4 on your device. There is no render queue, no cloud GPU, no storage bucket holding your video. The output never leaves your machine unless you decide to share it.</p>
+
+    <h2>The parts that do run on servers are free by design</h2>
+    <p>Two things happen outside your browser, and both run on free tiers:</p>
+    <p>• <strong>Script generation</strong> — modern language models offer free daily quotas, more than enough for a chaptered explainer script.<br>
+    • <strong>Narration</strong> — the tool serves free Microsoft Edge neural voices, with real male and female options, and no per-minute billing.</p>
+    <p>Neither step handles anything personal. Your topic goes out as anonymous text; the audio comes back. Nothing is stored, because there's nothing to store.</p>
+
+    <h2>Why "no server costs" means "forever free"</h2>
+    <p>A tool with a render farm has a variable cost per user — every free user is a future invoice. A tool whose heavy lifting happens client-side has a fixed cost of roughly zero, so "free" isn't a promotion that can expire; it's the only price that matches the cost structure.</p>
+    <p>And because the project is <a href="https://github.com/sailfishsolution/gitgem-explainer-tool">open source (MIT)</a>, you don't even have to take our word for it: you can read the code, verify the claims, and run the whole thing yourself. If Gitgem.org vanished, the tool would keep working.</p>
+
+    <div class="callout">
+      <p>That's the standard we hold at <strong><a href="https://gitgem.org">Gitgem.org</a></strong>: find and list open-source projects where "free" is a verifiable fact, not a marketing hook. The Explainer Tool is our own contribution — <a href="/">try it</a> and check our math.</p>
+    </div>
+
+    <h2>The catch list (we checked)</h2>
+    <p>• No account, no cookies, no analytics, no tracking.<br>
+    • No watermark fees, no export limits, no credit system.<br>
+    • Your topic, your edits, your videos — they never leave your device.<br>
+    • The one cost we can't remove: your own patience while your browser renders. That's it.</p>
+
+    <p>— <strong><a href="https://gitgem.org">Gitgem.org</a></strong> · <a href="https://x.com/GitGem">@GitGem</a> · <a href="https://github.com/sailfishsolution/gitgem-explainer-tool">GitHub</a></p>
+  </main>
+  <footer>
+    <a href="https://gitgem.org"><strong>Gitgem.org</strong></a> · <a href="/">Explainer Tool</a> · <a href="/blog/">Blog</a> · <a href="https://x.com/GitGem">@GitGem</a>
+  </footer>
+</body>
+</html>

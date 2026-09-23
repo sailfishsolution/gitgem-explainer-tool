@@ -1,6 +1,6 @@
 # Why Open Source Matters — and Why Gitgem Lists It
 
-*A Gitgem.org project story*
+*A Gitgem.org project story — everything we build starts and ends at **[Gitgem.org](https://gitgem.org)***
 
 ## Code is the most honest product description ever written
 
@@ -45,4 +45,4 @@ The best version of this tool probably doesn't exist yet. Open source is how it 
 
 ---
 
-**Links:** [Try the tool](https://gitgem-explainer-tool.pages.dev) · [Source on GitHub](https://github.com/sailfishsolution/gitgem-explainer-tool) · [Gitgem.org](https://gitgem.org) · [@GitGem on X](https://x.com/GitGem)
+**Links:** [Gitgem.org](https://gitgem.org) — the home of verified open-source projects · [Try the tool](https://gitgem-explainer-tool.pages.dev) · [Source on GitHub](https://github.com/sailfishsolution/gitgem-explainer-tool) · [@GitGem on X](https://x.com/GitGem)

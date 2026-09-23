@@ -781,7 +781,8 @@ export default function App() {
             <div className="flex items-center gap-4 text-xs text-gray-400">
               <span>No data collected</span>
               <span className="text-gray-200">·</span>
-              <a href="https://gitgem.org" className="hover:text-purple-600 transition-colors">Gitgem.org</a>
+              <a href="https://gitgem.org" className="hover:text-purple-600 transition-colors font-medium text-purple-500">Gitgem.org</a>
+              <a href="/blog/" className="hover:text-purple-600 transition-colors">Blog</a>
               <a href="https://github.com/sailfishsolution/gitgem-explainer-tool" className="hover:text-gray-600 transition-colors">GitHub</a>
               <a href="https://x.com/GitGem" className="hover:text-gray-900 transition-colors">Twitter</a>
             </div>
